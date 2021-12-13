@@ -1,0 +1,49 @@
+{
+  "name": "dotparser-normalized",
+  "version": "0.1.0",
+  "description": "A wrapper of dotparser to parse GraphViz dot file and collect nodes / edges.",
+  "main": "lib/index.js",
+  "module": "lib/index.mjs",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "test": "jest",
+    "tsc": "tsc -p . --noEmit",
+    "tsc:d": "tsc -p . --outDir lib -d --emitDeclarationOnly",
+    "prepublishOnly": "rimraf lib && npm run build && npm run tsc:d"
+  },
+  "dependencies": {
+    "dotparser": "1.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.12.10",
+    "@babel/preset-env": "7.12.11",
+    "@babel/preset-typescript": "7.12.7",
+    "@rollup/plugin-typescript": "8.3.0",
+    "babel-jest": "27.4.4",
+    "babel-loader": "8.2.3",
+    "jest": "27.4.4",
+    "rimraf": "3.0.2",
+    "rollup": "2.61.1",
+    "typescript": "4.5.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inokawa/dotparser-normalized.git"
+  },
+  "keywords": [
+    "graph",
+    "diagram",
+    "graphviz",
+    "dot"
+  ],
+  "author": "inokawa <stratoooo-taster@yahoo.co.jp> (https://github.com/inokawa/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/inokawa/dotparser-normalized/issues"
+  },
+  "homepage": "https://github.com/inokawa/dotparser-normalized#readme"
+}
