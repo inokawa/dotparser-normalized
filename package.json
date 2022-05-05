@@ -12,8 +12,7 @@
     "build": "rollup -c",
     "test": "jest",
     "tsc": "tsc -p . --noEmit",
-    "tsc:d": "tsc -p . --outDir lib -d --emitDeclarationOnly",
-    "prepublishOnly": "rimraf lib && npm run build && npm run tsc:d"
+    "prepublishOnly": "rimraf lib && npm run build"
   },
   "dependencies": {
     "dotparser": "1.0.0"
